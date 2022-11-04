@@ -11,3 +11,8 @@ services:
     environment:
       - NODE_ENV=development
     command: npm run dev
+  
+  mongodb:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=AzureDiamond
+      - MONGO_INITDB_ROOT_PASSWORD=hunter2
