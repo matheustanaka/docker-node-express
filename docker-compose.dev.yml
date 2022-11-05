@@ -10,6 +10,8 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+      - MONGO_USER=AzureDiamond
+      - MONGO_PASSWORD=hunter2
     command: npm run dev
   
   mongodb:
