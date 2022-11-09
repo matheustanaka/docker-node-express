@@ -21,6 +21,8 @@ const connectWithRetry = () => {
 
 connectWithRetry();
 
+app.use(express.json())
+
 app.use("/api/v1/posts", postRouter)
 
 const port = process.env.PORT || 4000;
