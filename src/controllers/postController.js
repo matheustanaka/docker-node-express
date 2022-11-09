@@ -1,6 +1,6 @@
 const Post = require("../models/postModel");
 
-const getAllPosts = async(req, res, next) => {
+exports.getAllPosts = async(req, res, next) => {
 
     try {
         const posts = await Post.find()
@@ -20,7 +20,7 @@ const getAllPosts = async(req, res, next) => {
 
 }
 
-const getOnePost = async(req, res, next) => {
+exports.getOnePost = async(req, res, next) => {
 
     try {
         const post = await Post.findById(req.params.id)
@@ -39,7 +39,7 @@ const getOnePost = async(req, res, next) => {
 
 }
 
-const createPost = async(req, res, next) => {
+exports.createPost = async(req, res, next) => {
 
     try {
         const post = await Post.create(req.body)
@@ -58,7 +58,7 @@ const createPost = async(req, res, next) => {
 
 }
 
-const updatePost = async(req, res, next) => {
+exports.updatePost = async(req, res, next) => {
 
     try {
         const post = await Post.findByIdAndUpdate(req.params.id, req.body, {
@@ -80,7 +80,7 @@ const updatePost = async(req, res, next) => {
 
 }
 
-const deletePost = async(req, res, next) => {
+exports.deletePost = async(req, res, next) => {
 
     try {
         const post = await Post.findByIdAndDelete(req.params.id)
@@ -94,12 +94,4 @@ const deletePost = async(req, res, next) => {
         })
     }
 
-}
-
-exports.module = {
-    getAllPosts,
-    getOnePost,
-    createPost,
-    updatePost,
-    deletePost
 }
