@@ -15,6 +15,9 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=hunter2
     volumes:
       - mongo-database:/data/db
+  
+  redis:
+    image: redis
 
 volumes:
   mongo-database:

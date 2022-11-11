@@ -12,6 +12,7 @@ services:
       - NODE_ENV=development
       - MONGO_USER=AzureDiamond
       - MONGO_PASSWORD=hunter2
+      - SESSION_SECRET=secret
     command: npm run dev
   
   mongodb:
