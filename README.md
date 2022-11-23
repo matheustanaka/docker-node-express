@@ -1,4 +1,4 @@
-# DEVOPS-NODEJS
+# POST.ME
 
 An Rest API developed with docker, redis and node.js. Basically a simple CRUD with user authentication and a post management.
 
